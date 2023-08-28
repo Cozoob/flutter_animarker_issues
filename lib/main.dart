@@ -1,18 +1,13 @@
 import 'package:city_transit/data/providers/home_provider.dart';
 import 'package:city_transit/data/providers/map_mode_provider.dart';
-import 'package:city_transit/domain/models/bus_marker.dart';
 import 'package:city_transit/presentation/bus_markers_bloc/bus_markers_bloc.dart';
-
-import 'package:city_transit/presentation/bus_markers_isolate_bloc/bus_markers_isolate_bloc.dart';
-
 import 'package:city_transit/presentation/map_wrapper.dart';
-import 'package:city_transit/single_marker_animation_example.dart';
+
 import 'package:city_transit/presentation/wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-//import 'package:isolate_bloc/isolate_bloc.dart';
 
 Future<void> main() async {
   // await initialize(isolateInitialization);
@@ -84,32 +79,6 @@ class CityTransitApp extends StatelessWidget {
           // home: SimpleMarkerAnimationExample()
         )
     );
-
-
-    // FOR ISOLATE BLOCS
-    // return MultiIsolateBlocProvider(
-    //     providers: [
-    //       // IsolateBlocProviderSingleChildWidget(),
-    //       IsolateBlocProvider(),
-    //       // IsolateBlocProvider(
-    //       //     create: (context) => BusMarkersBloc()..add(LoadBusMarkers())
-    //       // )
-    //     ],
-    //     child: MaterialApp(
-    //       // You can set here language code and country code.
-    //       // More info https://www.youtube.com/watch?v=Y6rFwIoiAR4&ab_channel=amplifyabhicoding
-    //       // For the future work.
-    //         locale: const Locale('en', 'PL'),
-    //         debugShowCheckedModeBanner: false,
-    //         title: 'City Transit',
-    //         theme: ThemeData(
-    //             scaffoldBackgroundColor: Colors.white
-    //         ),
-    //         home: const Wrapper()
-    //       // home: SimpleMarkerAnimationExample()
-    //     )
-    // );
-
   }
 }
 

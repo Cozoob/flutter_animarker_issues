@@ -1,4 +1,4 @@
-import 'package:city_transit/presentation/screens/routes_screen.dart';
+//import 'package:city_transit/presentation/screens/routes_screen.dart';
 import 'package:city_transit/presentation/utils/size_config.dart';
 import 'package:city_transit/presentation/widgets/common/custom_back_button.dart';
 import 'package:city_transit/presentation/widgets/common/custom_journey_search_bar.dart';
@@ -93,7 +93,7 @@ class PlanningScreen extends StatelessWidget {
                                   autofocus: true,
                                   controller: _toController,
                                   onSubmitted: (String value) {
-                                    Navigator.of(context).push(_moveToRoutesScreen());
+                                    //Navigator.of(context).push(_moveToRoutesScreen());
                                   }
                               )
                           ),
@@ -194,11 +194,11 @@ class PlanningScreen extends StatelessWidget {
 //   );
 // }
 
-Route _moveToRoutesScreen() {
-  return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => RoutesScreen(),
-    transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      return child;
-    },
-  );
-}
+// Route _moveToRoutesScreen() {
+//   return PageRouteBuilder(
+//     pageBuilder: (context, animation, secondaryAnimation) => RoutesScreen(),
+//     transitionsBuilder: (context, animation, secondaryAnimation, child) {
+//       return child;
+//     },
+//   );
+// }

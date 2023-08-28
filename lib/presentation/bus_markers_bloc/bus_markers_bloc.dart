@@ -23,7 +23,7 @@ class BusMarkersBloc extends Bloc<BusMarkersEvent, BusMarkersState> {
   // better way to make handlers to this events like here https://medium.com/@minh.ho89/bloc-simple-explain-and-walkthrough-building-a-countdown-timer-using-flutter-bloc-part-1-e128e3ea26ac
   BusMarkersBloc() : super(BusMarkersInitial()) {
     on<LoadBusMarkers>((event, emit) async {
-      await Future<void>.delayed(const Duration(seconds: 10)); // is it needed?
+      await Future<void>.delayed(const Duration(seconds: 2)); // is it needed?
 
       // In case of there is an subscription exists, we have to cancel it
       _busPositionsSubscription?.cancel();
@@ -67,7 +67,7 @@ class BusMarkersBloc extends Bloc<BusMarkersEvent, BusMarkersState> {
     on<ChangeBusMarker>((event, emit) {
       print(state);
 
-
+      print('ChangeBusMarker huh');
       if (state is BusMarkersLoaded) {
         print('ChangeBusMarker');
         final state = this.state as BusMarkersLoaded;

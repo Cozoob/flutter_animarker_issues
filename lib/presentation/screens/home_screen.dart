@@ -14,7 +14,7 @@ import 'package:city_transit/presentation/widgets/common/horizontal_list.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'package:http/http.dart' as http;
 
-import '../../domain/models/place.dart';
+import 'package:city_transit/domain/models/place.dart';
 
 /// Represents the home screen of the app.
 class HomeScreen extends StatefulWidget {

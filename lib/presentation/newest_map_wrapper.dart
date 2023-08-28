@@ -22,8 +22,6 @@ class NewestMapWrapper extends StatelessWidget {
   // https://stackoverflow.com/questions/14678593/the-application-may-be-doing-too-much-work-on-its-main-thread
   @override
   Widget build(BuildContext context) {
-    final markers = <MarkerId, Marker>{};
-
     // Good to read: https://ppantaleon.medium.com/flutter-blocbuilder-vs-blocconsumer-vs-bloclistener-a4a3ce7bfa9a
     return BlocConsumer<BusMarkersBloc, BusMarkersState>(
       listener: (context, state) {
